@@ -45,12 +45,15 @@ Orders = id / courierId / firstName / lastName / address / metroStation / phone 
 количеством их заказов в статусе «В доставке» (поле inDelivery = true). 
 
 SELECT co.login, COUNT(or.id) AS quantity
+
 FROM "Couriers" AS co
 
 INNER JOIN "Orders" AS or
+
 ON co.id = or.courierId
 
 WHERE or.inDelivery = true
+
 GROUP BY co.login;
 
 
@@ -67,11 +70,17 @@ GROUP BY co.login;
 
 
 SELECT track, status AS status
+
 CASE
+
 	WHEN 'finished' = true THEN status = 2
+ 
 	
 	WHEN 'cancelled' = true THEN status = -1
+ 
 
 	WHEN 'inDelivery' = true THEN status = 1
+ 
 END
+
 FROM "Couriers";
