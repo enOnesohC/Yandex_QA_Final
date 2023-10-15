@@ -1,0 +1,6 @@
+URL_SERVICE = "https://8b93e5c7-5f73-4076-ba39-47a7b94b07e1.serverhub.praktikum-services.ru"
+CREATE_COIRIER = "/api/v1/courier"
+COURIER_LOGIN = "/api/v1/courier/login"
+NEW_ORDER = "/api/v1/orders"
+CANCEL_ORDER = "/api/v1/orders/cancel?track=548362"
+GET_ORDER_NUMBER = "/api/v1/orders/track"
